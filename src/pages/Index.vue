@@ -123,7 +123,12 @@ export default {
     @include respond-below(sm) {
       flex-basis: 50%;
     }
+
+    &:nth-of-type(even) .Button {
+      margin-right: 0;
+    }
   }
+
   .Button {
     margin-right: 0.5rem;
     margin-bottom: 0.5rem;

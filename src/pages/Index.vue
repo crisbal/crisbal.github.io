@@ -119,6 +119,7 @@ export default {
   }
 
   &-container {
+    display: inline-block;
     @include respond-below(sm) {
       flex-basis: 50%;
     }

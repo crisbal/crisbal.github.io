@@ -100,6 +100,10 @@ a {
   border-radius: 3rem;
   border: 1px solid var(--dark-gray);
   transition: 0.1s linear all;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .Button i.mdi {

@@ -11,7 +11,7 @@
       br
       | When you use these photos, you can also&nbsp;
       a(:href="'mailto:' + $static.metadata.contactEmail") send me an email
-      | , and you will make my day :)
+      | and you will make my day :)
 </template>
 
 <page-query>

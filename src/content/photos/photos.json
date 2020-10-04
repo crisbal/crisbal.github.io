@@ -1,0 +1,93 @@
+[
+    {
+        "src": "./src/assets/photos/DSC00203.jpg"
+    },
+    {
+        "src": "./src/assets/photos/DSC00451.jpg"
+    },
+    {
+        "src": "./src/assets/photos/DSC00577.jpg"
+    },
+    {
+        "src": "./src/assets/photos/DSC00618.jpg",
+        "caption": "Varenna (Italy)"
+    },
+    {
+        "src": "./src/assets/photos/DSC00626.jpg",
+        "caption": "Varenna (Italy)"
+    },
+    {
+        "src": "./src/assets/photos/DSC00675.jpg",
+        "caption": "Varenna (Italy)"
+    },
+    {
+        "src": "./src/assets/photos/DSC00685.jpg"
+    },
+    {
+        "src": "./src/assets/photos/DSC00877.jpg",
+        "caption": "A painter in Nyon (Switzerland)"
+    },
+    {
+        "src": "./src/assets/photos/DSC00948.jpg",
+        "caption": "Lake Geneva (Switzerland)"
+    },
+    {
+        "src": "./src/assets/photos/DSC00975.jpg",
+        "caption": "Ivoire (France)"
+    },
+    {
+        "src": "./src/assets/photos/DSC01173.jpg",
+        "caption": "Irida"
+    },
+    {
+        "src": "./src/assets/photos/DSC01210.jpg",
+        "caption": "Irida"
+    },
+    {
+        "src": "./src/assets/photos/DSC01261.jpg"
+    },
+    {
+        "src": "./src/assets/photos/DSC01264.jpg",
+        "caption": "Annecy (France)"
+    },
+    {
+        "src": "./src/assets/photos/DSC01265.jpg",
+        "caption": "Annecy (France)"
+    },
+    {
+        "src": "./src/assets/photos/DSC01288.jpg",
+        "caption": "A shop in Annecy (France)"
+    },
+    {
+        "src": "./src/assets/photos/DSC01308.jpg",
+        "caption": "Annecy (France)"
+    },
+    {
+        "src": "./src/assets/photos/DSC01382.jpg",
+        "caption": "Sixt-Fer-à-Cheval (France)"
+    },
+    {
+        "src": "./src/assets/photos/DSC01517.jpg",
+        "caption": "Sixt-Fer-à-Cheval (France)"
+    },
+    {
+        "src": "./src/assets/photos/DSC01577.jpg",
+        "caption": "Lauretta"
+    },
+    {
+        "src": "./src/assets/photos/DSC01608.jpg",
+        "caption": "Lauretta"
+    },
+    {
+        "src": "./src/assets/photos/DSC01641.jpg",
+        "caption": "A couple in Geneva Station (Switzerland)"
+    },
+    {
+        "src": "./src/assets/photos/DSC01714.jpg",
+        "caption": "Gallerie d'Italia (Milano, Italy)"
+    },
+    {
+        "src": "./src/assets/photos/DSC01739.jpg",
+        "caption": "Gallerie d'Italia (Milano, Italy)"
+    }
+]

@@ -25,11 +25,17 @@ query {
 </page-query>
 
 <style lang="scss" scoped>
-@import "@/style.scss";
+@import "@/style/post.scss";
+@import "@/style/mixins.scss";
 
 .Post {
   margin-bottom: 2rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid #cfcfcf;
+
+  @include respond-below(sm) {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
 }
 </style>

@@ -1,12 +1,14 @@
-.Post {
-  align-items: center;
-}
+@import "./mixins.scss";
 
 .Post__title {
   color: var(--slate);
   font-size: 2rem;
   font-weight: normal;
   margin-bottom: 0.25rem;
+
+  @include respond-below(sm) {
+    font-size: 1.5rem;
+  }
 }
 
 .Post__title a {
@@ -22,17 +24,29 @@
   font-size: 1.2rem;
   color: #a3a3a3;
   margin-bottom: 0.25rem;
+
+  @include respond-below(sm) {
+    font-size: 1rem;
+  }
 }
 
 .Post__preview {
   font-size: 1.3rem;
   margin-bottom: 0.25rem;
+
+  @include respond-below(sm) {
+    font-size: 1.1rem;
+  }
 }
 
 .Post__read-more {
   font-size: 1.3rem;
   color: var(--link-color);
   text-decoration: none;
+
+  @include respond-below(sm) {
+    font-size: 1.1rem;
+  }
 }
 
 .Post__read-more:hover {

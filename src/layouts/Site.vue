@@ -3,7 +3,7 @@
     Header.View__heaader
     main.View__main
       slot
-    Footer.View__footer
+    Footer.View__footer(v-if="$route.name != 'home'")
 </template>
 
 <script>
@@ -16,7 +16,10 @@ export default {
 }
 
 </script>
+
 <style lang="scss">
+@import "@/style/mixins.scss";
+
 :root {
   --background-color: white;
   --text-color: #2D2D2D;
@@ -62,6 +65,10 @@ body {
   max-width: 1140px;
   padding: 0 2rem;
   margin: 0 auto;
+
+  @include respond-below(sm) {
+    padding: 0 1.5rem;
+  }
 }
 
 .View--Photos main {
@@ -72,6 +79,15 @@ body {
 
 .spacer {
   flex: 1;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .Button {

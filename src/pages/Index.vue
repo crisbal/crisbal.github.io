@@ -12,18 +12,22 @@
         |  and&nbsp;
         span(style='color:#ae2795;font-weight: bold;') photography
       .Home__buttons
-        a.Button(href='/cv.pdf' target="_blank")
-          i.mdi.mdi-account
-          |  Resume
-        a.Button(href='https://github.com/crisbal' target="_blank")
-          i.mdi.mdi-github
-          |  GitHub
-        a.Button(href='https://www.linkedin.com/in/crisbal/' target="_blank")
-          i.mdi.mdi-linkedin
-          |  LinkedIn
-        a.Button(:href="'mailto:' + $static.metadata.contactEmail")
-          i.mdi.mdi-at
-          |  Email
+        .Home__buttons-container
+          a.Button(href='/cv.pdf' target="_blank")
+            i.mdi.mdi-account
+            |  Resume
+        .Home__buttons-container
+          a.Button(href='https://github.com/crisbal' target="_blank")
+            i.mdi.mdi-github
+            |  GitHub
+        .Home__buttons-container
+          a.Button(href='https://www.linkedin.com/in/crisbal/' target="_blank")
+            i.mdi.mdi-linkedin
+            |  LinkedIn
+        .Home__buttons-container
+          a.Button(:href="'mailto:' + $static.metadata.contactEmail")
+            i.mdi.mdi-at
+            |  Email
 </template>
 
 <static-query>
@@ -44,12 +48,18 @@ export default {
 </script>
 
 <style lang="scss">
+@import "@/style/mixins.scss";
+
 .View--Index {
   main {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+
+    @include respond-below(sm) {
+      flex-direction: column;
+    }
   }
 }
 
@@ -57,6 +67,11 @@ export default {
   font-size: 5rem;
   font-weight: 700;
   white-space: nowrap;
+
+  @include respond-below(sm) {
+    font-size: 2.25rem;
+    white-space: normal;
+  }
 }
 
 .Home__subtitle {
@@ -67,23 +82,55 @@ export default {
     text-decoration: none;
     border-bottom: 3px solid var(--link-color);
   }
+
+  @include respond-below(sm) {
+    font-size: 1.5rem;
+  }
 }
 
 .Home__picture {
   margin-right: 2rem;
+
+  @include respond-below(sm) {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
 }
 
 .Home__image {
+  display: block;
   max-width: 100%;
   height: 20rem;
   border-radius: 1rem;
+
+  @include respond-below(sm) {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+  }
 }
 
 .Home__buttons {
   margin-top: 1rem;
 
+  @include respond-below(sm) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-container {
+    @include respond-below(sm) {
+      flex-basis: 50%;
+    }
+  }
   .Button {
     margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    @include respond-below(sm) {
+      display: block;
+      text-align: center;
+      padding: 0.5rem 0.75rem;
+    }
   }
 }
 </style>

@@ -19,72 +19,89 @@ query ($id: ID!) {
 </page-query>
 
 <style lang="scss" scoped>
-@import "@/style.scss";
+@import "@/style/mixins.scss";
+@import "@/style/post.scss";
 
 .Post__content {
-    font-size: 1.3rem;
-    margin: 1rem 0;
+  font-size: 1.3rem;
+  margin: 1rem 0;
+  @include respond-below(sm) {
+    margin: 0;
+    font-size: 1.1rem;
+  }
 
-    & /deep/ * {
-        margin-bottom: 1rem;
+  & /deep/ {
+    * {
+      margin-bottom: 1rem;
     }
 
-    & /deep/ a {
-        color: var(--link-color);
-        text-decoration: none;
-        &:hover {
-            text-decoration: underline;
-        }
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
-    & /deep/ h1, h2, h3, h4, h5, h6 {
-        margin-bottom: 0.25rem !important;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-bottom: 0.25rem !important;
     }
 
-    & /deep/ img, video {
+    img,
+    video {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+
+    figure {
+      text-align: center;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #cfcfcf;
+    }
+
+    figure figcaption {
+      margin-top: 0.25rem;
+      font-style: italic;
+    }
+
+    hr {
+      margin: 1rem 0;
+    }
+
+    blockquote {
+      padding: 1rem;
+      background-color: #f9f9f9;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    code {
+      display: inline-block;
+      background-color: #f9f9f9;
+      padding: 0 0.2rem;
+    }
+
+    pre {
+      code {
         display: block;
-        margin: 0 auto;
-        max-width: 100%;
+        padding: 0.75rem;
+        overflow-x: auto;
+      }
     }
 
-    & /deep/ figure {
-        text-align: center;
-        padding: 1rem;
-        border-radius: 0.5rem;
-        margin-bottom: 1rem;
-        border: 1px solid #cfcfcf;
+    ul{
+        -webkit-margin-start: 1em;
     }
-
-    & /deep/ figure figcaption {
-        margin-top: 0.25rem;
-        font-style: italic;
-    }
-
-    & /deep/ hr {
-        margin: 1rem 0;
-    }
-
-    & /deep/ blockquote {
-        padding: 1rem;
-        background-color: #f9f9f9;
-
-        p {
-            margin-bottom: 0;
-        }
-    }
-
-    & /deep/ code {
-        display: inline-block;
-        background-color: #f9f9f9;
-        padding: 0 0.2rem;
-    }
-
-    & /deep/ pre {
-        code {
-            display: block;
-            padding: 0.75rem;
-            overflow-x: auto;
-        }
-    }
+  }
 }
 </style>

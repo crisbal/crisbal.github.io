@@ -26,6 +26,7 @@ I also installed a blog powered by WordPress for this first version. I made the 
 
 
 ### Second Version - January 2015
+
 <video src="/video/v2.webm" controls></video>
 
 In the time between the first and this version I learnt a lot of things and overall **improved** my web-related skills. I decided it was time to **remake** the website, from scratch. The one I had at the time was not something I was proud of and it **didn't look so good** now.
@@ -40,6 +41,7 @@ I tried to make it look more **fresh** and clean: I decided to drop most of the 
 *   SVG Icons
 
 ### Third Version - March 2015
+
 <video src="/video/v3.webm" controls></video>
 
 This is the current version of the Website, right now it **looks good to me**. But every now and then I find a few things to tweak and fix. I replaced the list with a **showcase** of the projects I worked on. I think that (at least on my website) what I worked on is more important than what I know. I also spent a few time focusing on typhograpy.

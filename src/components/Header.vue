@@ -22,12 +22,14 @@ query {
 .Header {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   padding: 1.25rem 2rem;
 
   @include respond-below(sm) {
     padding: 0.75rem 1rem;
+    flex-direction: column;
+    align-items: center;
   }
 
   .spacer {
@@ -45,8 +47,6 @@ query {
     text-decoration: none;
 
     @include respond-below(sm) {
-      flex: 1;
-      text-align: center;
       margin-bottom: 0.25rem;
     }
 
@@ -57,7 +57,6 @@ query {
 
   &__nav {
     @include respond-below(sm) {
-      flex: 1;
       text-align: center;
     }
   }
@@ -69,6 +68,7 @@ query {
     transition: 0.1s linear all;
     &:hover {
       color: var(--link-color);
+      text-decoration: none;
     }
 
     &.active--exact {

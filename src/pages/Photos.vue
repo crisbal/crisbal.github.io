@@ -5,13 +5,13 @@
         g-image.Photo__image(:src="photo.node.src")
         .Photo__caption(v-if="photo.node.caption") {{ photo.node.caption }}
     .Photos__license
-      | The photos are licensed under the&nbsp;
+      | These photos are licensed under the&nbsp;
       a(href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank") CC-BY-SA 4.0 License
       | .
       br
-      | When you use these photos, you can also&nbsp;
-      a(:href="'mailto:' + $static.metadata.contactEmail") send me an email
-      | &nbsp;and you will make my day :)
+      | If you use these photos, you can make my day by &nbsp;
+      a(:href="'mailto:' + $static.metadata.contactEmail") sending me an email
+      | &nbsp;to let me know.
 </template>
 
 <page-query>

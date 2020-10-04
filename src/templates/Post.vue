@@ -78,7 +78,7 @@ query ($id: ID!) {
 
     blockquote {
       padding: 1rem;
-      background-color: #f9f9f9;
+      background-color: var(--light-gray);
 
       p {
         margin-bottom: 0;
@@ -87,7 +87,7 @@ query ($id: ID!) {
 
     code {
       display: inline-block;
-      background-color: #f9f9f9;
+      background-color: var(--light-gray);
       padding: 0 0.2rem;
     }
 

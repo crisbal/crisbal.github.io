@@ -32,8 +32,10 @@ export default {
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #2D2D2D;
+    --light-gray: #494949;
     --text-color: white;
     --slate: white;
+    --link-color: #478dff;
   }
 }
 

@@ -49,6 +49,10 @@ query {
       text-align: center;
       margin-bottom: 0.25rem;
     }
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   &__nav {

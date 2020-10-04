@@ -122,10 +122,10 @@ export default {
     display: inline-block;
     @include respond-below(sm) {
       flex-basis: 50%;
-    }
 
-    &:nth-of-type(even) .Button {
-      margin-right: 0;
+      &:nth-of-type(even) .Button {
+        margin-right: 0;
+      }
     }
   }
 

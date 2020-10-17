@@ -1,8 +1,11 @@
 <template lang="pug">
 SiteLayout.View--Post
-  .Post
-    .Post__date On {{ $page.post.date }}
-    .Post__title {{ $page.post.title }}
+  article.Post
+    header
+      .Post__date On&nbsp;
+        time(:datetime="$page.post.date" pubdate="pubdate") {{ $page.post.prettyDate }}
+      h2.Post__title
+        g-link(:to="$page.post.path") {{ $page.post.title }}
     .Post__content(v-html="$page.post.content")
 </template>
 
@@ -11,12 +14,28 @@ query ($id: ID!) {
   post(id: $id) {
     id
     title
-    date (format: "DD MMMM YYYY")
+    prettyDate: date(format: "DD MMMM YYYY")
+    date (format: "YYYY-MM-DD")
     path
     content
+    excerpt
+
   }
 }
 </page-query>
+
+<script>
+export default {
+  metaInfo() {
+    return {
+      title: this.$page.post.title,
+      meta: [
+        { name: "description", content: this.$page.post.excerpt }
+      ],
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 @import "@/style/mixins.scss";

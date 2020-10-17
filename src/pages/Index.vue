@@ -42,7 +42,10 @@ query {
 export default {
   metaInfo: {
     title: 'Cristian Baldi',
-    titleTemplate: '%s'
+    titleTemplate: '%s',
+    meta: [
+      { name: "description", content: "DevOps Engineer and Web Developer with a passion for Open Source and Photography." }
+    ]
   },
 };
 </script>

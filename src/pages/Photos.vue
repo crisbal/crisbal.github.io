@@ -37,6 +37,17 @@ query {
 }
 </static-query>
 
+<script>
+export default {
+  metaInfo: {
+    title: 'Photos',
+    meta: [
+      { name: "description", content: "Photos that I have taken." }
+    ]
+  },
+};
+</script>
+
 <style lang="scss" scoped>
 @import "@/style/mixins.scss";
 

@@ -1,11 +1,14 @@
 <template lang="pug">
 SiteLayout.View--Posts
-  .Post(v-for="post in $page.allPost.edges")
-    .Post__date On {{ post.node.date }}
-    h2.Post__title
-      g-link(:to="post.node.path") {{ post.node.title }}
+  article.Post(v-for="post in $page.allPost.edges")
+    header
+      .Post__date On&nbsp;
+        time(:datetime="post.node.date" pubdate="pubdate") {{ post.node.prettyDate }}
+      h2.Post__title
+        g-link(:to="post.node.path") {{ post.node.title }}
     .Post__preview {{ post.node.excerpt }}
-    g-link.Post__read-more(:to="post.node.path") Read More
+    footer
+      g-link.Post__read-more(:to="post.node.path") Read More
 </template>
 
 <page-query>
@@ -15,7 +18,8 @@ query {
       node {
         id
         title
-        date (format: "DD MMMM YYYY")
+        prettyDate: date(format: "DD MMMM YYYY")
+        date (format: "YYYY-MM-DD")
         excerpt
         path
       }
@@ -23,6 +27,17 @@ query {
   }
 }
 </page-query>
+
+<script>
+export default {
+  metaInfo: {
+    title: 'Posts',
+    meta: [
+      { name: "description", content: "Blog with some posts that I have written." }
+    ]
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 @import "@/style/post.scss";

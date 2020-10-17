@@ -3,13 +3,20 @@ import SiteLayout from '~/layouts/Site.vue'
 export default function (Vue, { router, head, isClient }) {
   Vue.component('SiteLayout', SiteLayout)
 
+  head.htmlAttrs.lang = 'en'
+  // Remove "generator" meta tag
+  const generatorIndex = head.meta.findIndex(e => e.name === 'generator')
+  if (generatorIndex !== -1) head.meta.splice(generatorIndex, 1)
+
+
   head.link.push({
-    rel: 'stylesheet',
     href: 'https://cdn.materialdesignicons.com/5.3.45/css/materialdesignicons.min.css',
+    rel: 'stylesheet',
   })
 
   head.link.push({
-    rel: 'stylesheet',
     href: 'https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap',
+    rel: 'stylesheet',
   })
+
 }

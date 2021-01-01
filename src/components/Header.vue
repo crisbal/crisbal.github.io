@@ -28,8 +28,8 @@ query {
 
   @include respond-below(sm) {
     padding: 0.75rem 1rem;
-    flex-direction: column;
-    align-items: center;
+    display: block;
+    text-align: center;
   }
 
   .spacer {

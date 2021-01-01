@@ -1,3 +1,5 @@
+const autoprefixer = require("autoprefixer");  // ADDED THIS LINE
+
 module.exports = {
   siteName: 'Cristian Baldi',
   siteUrl: "https://www.baldi.me",
@@ -19,5 +21,12 @@ module.exports = {
   ],
   templates: {
     Post: '/posts/:year/:month/:day/:title',
+  },
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: [autoprefixer()]
+      }
+    }
   }
 }

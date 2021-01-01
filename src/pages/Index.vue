@@ -13,7 +13,7 @@
         span(style='color:#ae2795;font-weight: bold;') photography
       .Home__buttons
         .Home__buttons-container
-          a.Button(href='/cv.pdf' target="_blank")
+          g-link.Button(to='/resume')
             i.mdi.mdi-account
             |  Resume
         .Home__buttons-container
@@ -65,7 +65,10 @@ export default {
     }
   }
 }
+</style>
 
+<style lang="scss" scoped>
+@import "@/style/mixins.scss";
 .Home__title {
   font-size: 5rem;
   font-weight: 700;

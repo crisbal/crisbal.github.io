@@ -1,0 +1,138 @@
+meta:
+  name: Cristian Baldi
+  claim: Python, DevOps, Web Development
+  links:
+  - text: cristian@baldi.me
+    href: mailto:cristian@baldi.me
+  - text: github.com/crisbal
+    href: https://github.com/crisbal
+sections:
+- title: Experience
+  titleColor: "rgb(39, 174, 96)"
+  type: entries
+  width: 100%
+  entries:
+  - place: CERN
+    date: Mar. 2020 - Dec. 2020
+    title: Python DevOps Engineer - Technical Student
+    details:
+    - Developed a tool to deploy Python applications in the CERN Control Centre
+    - Maintained and extended developement tools and services for Python developers
+    - Implemented a solution for tracking Python usage inside the organization
+    - Supported users and developers on mailing lists and chat channels
+  - place: 2Program S.r.l
+    date: July 2017 - Feb. 2020
+    title: Frontend Web Developer
+    details:
+    - Designed and implemented public websites focusing on SEO and best practices
+    - Developed interactive and responsive progressive web applications using Vue.js
+    - Maintained and expanded existing Laravel projects as requested by clients
+  - place: Google Summer of Code @ KDE e.V.
+    date: May 2017 - Sept. 2017
+    title: Open Source Fullstack Web Developer
+    details:
+    - Designed and developed a server-side rendered progressive web app with Vue.js
+    - Developed a backend service to interface with various APIs using Flask
+    - Implemented unit and end-to-end tests for the web app
+    - Containerized the web app and the backend service for usage with Docker
+  - place: WikiToLearn, a KDE project
+    date: Dec. 2015 - Sept. 2017
+    title: Fullstack Developer and Open Source Contributor
+    details:
+    - Took part in the decision process of an already-existing open source project
+    - Planned the product and the architecture with other developers and sysadmins
+    - Developed themes and extensions for the Mediawiki platform
+    - Maintained and improved forks of existing open source projects
+  # - place: S.C.T. Informatica
+  #   date: Summer 2013 & 2014
+  #   title: Intern Software Developer
+  #   details:
+  #   - Developed a web application for designing and previewing prefabricated buildings
+- title: Education
+  titleColor: "rgb(39, 78, 174)"
+  type: entries
+  width: 100%
+  entries:
+  - place: University of Milano Bicocca
+    date: 2018 - In progress
+    title: Master's Degree in Computer Science
+    details:
+    - "Thesis: Deployment of Python applications in the CERN Control Centre"
+    - "Electives: Advance Machine Learning, Data Analytics, Large Scale Data Management, Data & Text Mining, Probabilistic Models, Cloud Computing, Software Architecture"
+  - place: University of Milano Bicocca
+    date: 2015 - 2018
+    title: Bachelor's Degree in Computer Science
+    details:
+    - "Final grade: 110/110 cum laude"
+    - "Thesis: Reinforcement Learning for Global Optimization - Comparing learned policies to Bayesian Optimization"
+- title: Skills
+  titleColor: "rgb(174, 39, 39)"
+  width: 50%
+  type: items
+  extra:
+  - breath
+  items:
+  - title: Python 3
+    text: Flask, Jupyter, Pandas, Matplotlib, Keras
+  - title: Operations
+    text: Docker, Ansible, Bash Scripting
+  - title: BigData
+    text: Elasticsearch, Kibana, Kafka, Faust
+  - title: Databases
+    text: "SQL, MongoDB, SQLite"
+  - title: Version Control
+    text: Git, GitLab, Git Flow
+  - title: Development Practicess
+    text: Testing, CI/CD, Docs
+  - title: HTML5 & CSS3
+    text: Pug, Sass
+  - title: JavaScript ES6 & Node.js
+    text: Socket.io, jQuery, Axios
+  - title: Vue.js
+    text: Vuetify, Vuex, Server Side Rendering
+  - title: PHP7
+    text: Laravel, Lumen, Mediawiki, Wordpress
+  - title: Other languages
+    text: Java, Typescript
+  - title: Machine Learning
+    text: Supervised & Reinforcement
+- title: Personal Projects
+  titleColor: "rgb(174, 39, 149)"
+  width: 50%
+  type: items
+  extra:
+  - margin-bottom
+  - no-bullet
+  items:
+  - title: HMM Text Corrector
+    description: Python, NumPy, Flask
+    text: Text corrector based on Hidden Markov Models with novel ideas to improve performance and accuracy.
+  - title: album-splitter
+    description: Python, BeautifulSoup, ffmpeg
+    text: A script to automatically split a single-file Mp3 album into its tracks; Supports scraping metadata from Wikipedia.
+  - title: Nikoro - a Telegram Chatbot Framework
+    description: Node.js
+    text: A framework for developing plugin-based chatbots, focusing on ease of use for the plugins developers.
+  - title: PlayStoreLinks_bot
+    description: Python, Beautiful Soup, Unit Testing
+    text: A bot for an online forum handling from 50 to 100 requests daily for more than 5 years.
+- title: Other
+  titleColor: "rgb(255, 123, 28)"
+  width: 100%
+  type: items
+  extra:
+  - smallTitle
+  - compact
+  items:
+  - title: Speaker at Milano Digital Week
+    description: March 2019
+    text: How do computers learn?
+  - title: Speaker at unixMib
+    description: March 2019
+    text:  Hitchhiker's Guide to Web Development
+  - title: Mentor for Google Summer of Code
+    description: Summer 2016
+    text: KDE e.V
+  - title: Mentor for Google Code-In
+    description: Winter 2015 & Winter 2016
+    text: KDE e.V.

@@ -94,6 +94,8 @@ a {
 
 .Button {
   color: var(--text-color);
+  background-color: white;
+  cursor: pointer;
   text-decoration: none;
   display: inline-flex;
   align-items: center;

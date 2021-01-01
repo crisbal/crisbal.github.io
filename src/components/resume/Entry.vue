@@ -39,7 +39,7 @@ export default {
 
   &__place {
     @include respond-below(sm) {
-      font-weight: 400;
+      font-size: 1.1em;
     }
   }
   &__content {
@@ -53,6 +53,9 @@ export default {
 
   &__title {
     font-weight: 400;
+    @include respond-below(sm) {
+      font-size: 1.2em;
+    }
   }
 
   &__details {

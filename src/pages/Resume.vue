@@ -172,6 +172,7 @@ export default {
     }
 
     @include respond-below(sm) {
+      display: none;
       text-align: left;
     }
   }
@@ -183,7 +184,7 @@ export default {
     color: var(--slate);
     line-height: 0.8;
     @include respond-below(sm) {
-      display: block;
+      margin-right: 1rem;
       font-size: 2em;
     }
   }
@@ -232,6 +233,9 @@ export default {
 
   .Entry {
     margin-bottom: 0.5em;
+    @include respond-below(sm) {
+      margin-bottom: 1em;
+    }
   }
 }
 

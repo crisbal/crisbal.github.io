@@ -9,11 +9,12 @@ SiteLayout.View--Resume
         h3.Resume__claim  {{ resume.meta.claim }}
     .Resume__sections
       template(v-for="section in resume.sections")
+        // :style="{ flex: `1 0 ${section.width || '100%'}` }"
         Section(
           :title="section.title"
           :titleColor="section.titleColor"
-          :style="{ flex: `1 0 ${section.width || '100%'}` }"
           :extra="section.extra"
+          :style="{'grid-area': section.title.replaceAll(' ', '')}"
         )
           template(v-if="section.type=='entries'" v-for="entry in section.entries")
             Entry(
@@ -26,17 +27,19 @@ SiteLayout.View--Resume
             .Items(
               :class=`section.extra`
             )
-              ul
-                li.Item(v-for="item in section.items")
-                  span.Item__title {{ item.title }}&nbsp;
-                  template(v-if="section.extra && section.extra.includes('compact')")
-                    span.Item__text {{ item.text }}&nbsp;
-                    span.Item__description {{ item.description }}
-                  template(v-else)
-                    template(v-if="item.description")
+              template(v-for="subsection in section.subsections || [{ items: section.items }]")
+                div.Items__subsection-name(v-if="subsection.name") {{ subsection.name }}
+                ul
+                  li.Item(v-for="item in subsection.items")
+                    span.Item__title {{ item.title }}&nbsp;
+                    template(v-if="section.extra && section.extra.includes('compact')")
+                      span.Item__text {{ item.text }}&nbsp;
                       span.Item__description {{ item.description }}
-                      br
-                    span.Item__text {{ item.text }}
+                    template(v-else)
+                      template(v-if="item.description")
+                        span.Item__description {{ item.description }}
+                        br
+                      span.Item__text {{ item.text }}
   .Download
     a(href="/Cristian Baldi - Resume.pdf" target="_blank").Button
       i.mdi.mdi-download
@@ -187,6 +190,8 @@ export default {
       margin-right: 1rem;
       font-size: 2em;
     }
+
+
   }
 
   &__claim {
@@ -219,8 +224,8 @@ export default {
   }
 
   &__sections {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-areas: "Education Education" "Experience Experience" "Skills PersonalProjects" "Skills Other";
 
     @include respond-below(sm) {
       display: block;
@@ -240,6 +245,13 @@ export default {
 }
 
 .Items {
+  &__subsection-name {
+    margin-top: 0.75rem;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
   &.breath {
     line-height: 1.25;
   }
@@ -254,13 +266,17 @@ export default {
 
   &.no-bullet {
     ul {
+      li {
+        text-indent: 0;
+        padding-left: 0;
+      }
+
       li::before {
         content: "";
       }
 
       .Item__text {
         display: inline-block;
-        padding-left: 0.3rem;
       }
     }
   }
@@ -268,6 +284,11 @@ export default {
   ul {
     list-style-position: inside;
     list-style-type: none;
+
+    li {
+      text-indent: -0.75rem;
+      padding-left: 0.75rem;
+    }
 
     li::before {
       content: "• ";

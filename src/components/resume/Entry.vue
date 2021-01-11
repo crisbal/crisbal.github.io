@@ -38,6 +38,8 @@ export default {
   }
 
   &__place {
+    font-size: 1.1em;
+    font-weight: 400;
     @include respond-below(sm) {
       font-size: 1.1em;
     }
@@ -68,6 +70,11 @@ export default {
     ul {
       list-style-position: inside;
       list-style-type: none;
+
+      li {
+        text-indent: -0.75rem;
+        padding-left: 0.75rem;
+      }
 
       li::before {
         content: "• ";

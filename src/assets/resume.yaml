@@ -39,7 +39,6 @@ sections:
     date: Dec. 2015 - Sept. 2017
     title: Fullstack Developer and Open Source Contributor
     details:
-    - Took part in the decision process of an already-existing open source project
     - Planned the product and the architecture with other developers and sysadmins
     - Developed themes and extensions for the Mediawiki platform
     - Maintained and improved forks of existing open source projects
@@ -64,38 +63,51 @@ sections:
     title: Bachelor's Degree in Computer Science
     details:
     - "Final grade: 110/110 cum laude"
-    - "Thesis: Reinforcement Learning for Global Optimization - Comparing learned policies to Bayesian Optimization"
+    - "Thesis: Reinforcement Learning for Global Optimization"
 - title: Skills
   titleColor: "rgb(174, 39, 39)"
   width: 50%
   type: items
   extra:
   - breath
-  items:
-  - title: Python 3
-    text: Flask, Jupyter, Pandas, Matplotlib, Keras
-  - title: Operations
-    text: Docker, Ansible, Bash Scripting
-  - title: BigData
-    text: Elasticsearch, Kibana, Kafka, Faust
-  - title: Databases
-    text: "SQL, MongoDB, SQLite"
-  - title: Version Control
-    text: Git, GitLab, Git Flow
-  - title: Development Practicess
-    text: Testing, CI/CD, Docs
-  - title: HTML5 & CSS3
-    text: Pug, Sass
-  - title: JavaScript ES6 & Node.js
-    text: Socket.io, jQuery, Axios
-  - title: Vue.js
-    text: Vuetify, Vuex, Server Side Rendering
-  - title: PHP7
-    text: Laravel, Lumen, Mediawiki, Wordpress
-  - title: Other languages
-    text: Java, Typescript
-  - title: Machine Learning
-    text: Supervised & Reinforcement
+  subsections:
+  - name: Python 3
+    items:
+    - title: Libraries
+      text: Flask, Pandas, Matplotlib, Pytest, Requests
+    - title: Other
+      text: Virtual Environments, Package Management
+  - name: DevOps
+    items:
+    - title: System Administration
+      text: "Ubuntu, Debian, Arch Linux"
+    - title: General Tools
+      text: Docker, Ansible, Bash Scripting
+    - title: Best Practices
+      text: Testing, CI/CD, Docs
+    - title: Version Control
+      text: Git, Git Flow, GitLab, GitLab CI
+  - name: Web Development
+    items:
+    - title: HTML5 & CSS3
+      text: Pug, Sass
+    - title: Vue.js
+      text: Vuex, Server Side Rendering, Vuetify
+    - title: JavaScript ES6 & Node.js
+      text: Socket.io, Axios, jQuery
+    - title: PHP7
+      text: Laravel, Lumen, Mediawiki, Wordpress
+  - name: Other
+    items:
+      - title: Databases
+        text: "SQL, MongoDB"
+      - title: BigData
+        text: Elasticsearch, Kibana, Kafka, Faust
+      - title: Other languages
+        text: Typescript, Java
+      - title: Machine Learning
+        text: Supervised & Reinforcement
+
 - title: Personal Projects
   titleColor: "rgb(174, 39, 149)"
   width: 50%
@@ -112,7 +124,7 @@ sections:
     text: A script to automatically split a single-file Mp3 album into its tracks; Supports scraping metadata from Wikipedia.
   - title: Nikoro - a Telegram Chatbot Framework
     description: Node.js
-    text: A framework for developing plugin-based chatbots, focusing on ease of use for the plugins developers.
+    text: A framework for developing plugin-based chatbots, focusing on ease of use for plugins developers.
   - title: PlayStoreLinks_bot
     description: Python, Beautiful Soup, Unit Testing
     text: A bot for an online forum handling from 50 to 100 requests daily for more than 5 years.
@@ -134,5 +146,5 @@ sections:
     description: Summer 2016
     text: KDE e.V
   - title: Mentor for Google Code-In
-    description: Winter 2015 & Winter 2016
+    description: Winter 2015 & 2016
     text: KDE e.V.

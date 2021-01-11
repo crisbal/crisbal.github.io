@@ -34,7 +34,7 @@ export default {
   }
 
   &__content {
-    padding-left: 0.5em;
+    // padding-left: 0.3em;
 
     @include respond-below(sm) {
       padding-left: 0.3em;

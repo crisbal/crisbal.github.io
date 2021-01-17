@@ -1,6 +1,7 @@
 import SiteLayout from '~/layouts/Site.vue'
+import VueGtag from 'vue-gtag';
 
-export default function (Vue, { router, head, isClient }) {
+export default function (Vue, { router, head }) {
   Vue.component('SiteLayout', SiteLayout)
 
   head.htmlAttrs.lang = 'en'
@@ -19,4 +20,7 @@ export default function (Vue, { router, head, isClient }) {
     rel: 'stylesheet',
   })
 
+  Vue.use(VueGtag, {
+    config: { id: 'G-8W675275W1' }
+  }, router);
 }

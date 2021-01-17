@@ -9,7 +9,8 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "gridsome": "^0.7.23"
+    "gridsome": "^0.7.23",
+    "vue-gtag": "^1.10.0"
   },
   "devDependencies": {
     "@gridsome/source-filesystem": "^0.6.2",

@@ -12,6 +12,9 @@ module.exports = {
   },
   plugins: [
     {
+      use: '@gridsome/plugin-sitemap'
+    },
+    {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Post',

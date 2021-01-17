@@ -9,6 +9,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@gridsome/plugin-sitemap": "^0.4.0",
     "gridsome": "^0.7.23",
     "vue-gtag": "^1.10.0"
   },

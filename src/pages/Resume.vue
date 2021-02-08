@@ -102,7 +102,7 @@ export default {
     max-width: none;
     width: 100%;
     padding: 1rem;
-    background-color: #f8f8fb;
+    background-color: var(--light-gray);
 
     @include respond-below(sm) {
       padding: 0rem;
@@ -144,7 +144,7 @@ export default {
   max-width: 1140px;
   margin: 0 auto;
   padding: 1.5em 2em;
-  background-color: white;
+  background-color: var(--background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;

@@ -47,6 +47,7 @@ export default {
 
 html, body,  #app {
   height: 100%;
+  width: 100%;
 }
 
 body {
@@ -94,7 +95,7 @@ a {
 
 .Button {
   color: var(--text-color);
-  background-color: white;
+  background-color: var(--background-color);
   cursor: pointer;
   text-decoration: none;
   display: inline-flex;

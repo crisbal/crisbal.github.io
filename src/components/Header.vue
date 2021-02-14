@@ -1,5 +1,7 @@
 <template lang="pug">
     header.Header
+      // Fix for iOS/Safari: display:flex has no height (https://stackoverflow.com/questions/33636796/chrome-safari-not-filling-100-height-of-flex-parent)
+      .Header__content
         g-link.Header__title(to="/") {{ this.$static.metadata.siteName }}
         .spacer
         nav.Header__nav
@@ -20,16 +22,20 @@ query {
 @import "@/style/mixins.scss";
 
 .Header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   padding: 1.25rem 2rem;
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    @include respond-below(sm) {
+      display: block;
+      text-align: center;
+    }
+  }
 
   @include respond-below(sm) {
     padding: 0.75rem 1rem;
-    display: block;
-    text-align: center;
   }
 
   .spacer {

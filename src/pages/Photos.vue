@@ -82,7 +82,6 @@ export default {
   &__image {
     width: 100%;
     height: auto;
-    pointer-events: none;
   }
 
   &__caption {

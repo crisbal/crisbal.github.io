@@ -9,14 +9,6 @@
         "src": "./src/assets/photos/DSC00577.jpg"
     },
     {
-        "src": "./src/assets/photos/DSC00618.jpg",
-        "caption": "Varenna (Italy)"
-    },
-    {
-        "src": "./src/assets/photos/DSC00626.jpg",
-        "caption": "Varenna (Italy)"
-    },
-    {
         "src": "./src/assets/photos/DSC00675.jpg",
         "caption": "Varenna (Italy)"
     },
@@ -26,10 +18,6 @@
     {
         "src": "./src/assets/photos/DSC00877.jpg",
         "caption": "A painter in Nyon (Switzerland)"
-    },
-    {
-        "src": "./src/assets/photos/DSC00948.jpg",
-        "caption": "Lake Geneva (Switzerland)"
     },
     {
         "src": "./src/assets/photos/DSC00975.jpg",
@@ -67,10 +55,6 @@
         "caption": "Sixt-Fer-à-Cheval (France)"
     },
     {
-        "src": "./src/assets/photos/DSC01517.jpg",
-        "caption": "Sixt-Fer-à-Cheval (France)"
-    },
-    {
         "src": "./src/assets/photos/DSC01577.jpg",
         "caption": "Lauretta"
     },
@@ -89,5 +73,25 @@
     {
         "src": "./src/assets/photos/DSC01739.jpg",
         "caption": "Gallerie d'Italia (Milano, Italy)"
+    },
+    {
+        "src": "./src/assets/photos/DSC01839.jpg",
+        "caption": "Monte Bianco / Mont Blanc"
+    },
+    {
+        "src": "./src/assets/photos/DSC01846.jpg"
+    },
+    {
+        "src": "./src/assets/photos/DSC01862.jpg"
+    },
+    {
+        "src": "./src/assets/photos/DSC01877.jpg"
+    },
+    {
+        "src": "./src/assets/photos/DSC01930.jpg",
+        "caption": "Monte Bianco / Mont Blanc"
+    },
+    {
+        "src": "./src/assets/photos/DSC02082.jpg"
     }
 ]

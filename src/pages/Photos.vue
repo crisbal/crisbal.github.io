@@ -75,18 +75,22 @@ export default {
 .Photo {
   position: relative;
   transition: 0.1s linear all;
+  padding: 0.5rem;
+  page-break-inside: avoid;
+  break-inside: avoid;
 
   &__image {
     width: 100%;
     height: auto;
+    pointer-events: none;
   }
 
   &__caption {
     line-height: 1;
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    right: 0.5rem;
     padding: 0.25rem 0.5rem;
     color: white;
     background-color: rgba(0,0,0,0.7);

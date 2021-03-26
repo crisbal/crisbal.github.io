@@ -225,7 +225,7 @@ export default {
 
   &__sections {
     display: grid;
-    grid-template-areas: "Education Education" "Experience Experience" "Skills PersonalProjects" "Skills Other";
+    grid-template-areas: "Experience Experience" "Education Education" "Skills PersonalProjects" "Skills Other";
 
     @include respond-below(sm) {
       display: block;

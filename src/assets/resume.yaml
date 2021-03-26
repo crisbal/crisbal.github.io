@@ -14,7 +14,7 @@ sections:
   entries:
   - place: CERN
     date: Mar. 2020 - Dec. 2020
-    title: Python DevOps Engineer - Technical Student
+    title: Python DevOps Engineer
     details:
     - Developed a tool to deploy Python applications in the CERN Control Centre
     - Maintained and extended development tools and services for Python developers
@@ -53,17 +53,18 @@ sections:
   width: 100%
   entries:
   - place: University of Milano Bicocca
-    date: 2018 - In progress
+    date: 2018 - 2021
     title: Master's Degree in Computer Science
     details:
-    - "Thesis: Deployment of Python applications in the CERN Control Centre"
+    - "Thesis: Deployment of Python Applications in the CERN Control Centre"
+    - "Final grade: 110/110 cum laude"
     - "Electives: Advance Machine Learning, Data Analytics, Large Scale Data Management, Data & Text Mining, Probabilistic Models, Cloud Computing, Software Architecture"
   - place: University of Milano Bicocca
     date: 2015 - 2018
     title: Bachelor's Degree in Computer Science
     details:
-    - "Final grade: 110/110 cum laude"
     - "Thesis: Reinforcement Learning for Global Optimization"
+    - "Final grade: 110/110 cum laude"
 - title: Skills
   titleColor: "rgb(174, 39, 39)"
   width: 50%

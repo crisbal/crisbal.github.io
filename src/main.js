@@ -13,13 +13,11 @@ export default function (Vue, { router, head }) {
   head.link.push({
     href: 'https://cdn.materialdesignicons.com/5.3.45/css/materialdesignicons.min.css',
     rel: 'stylesheet',
-    body: true,
   })
 
   head.link.push({
     href: 'https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap',
     rel: 'stylesheet',
-    body: true,
   })
 
   Vue.use(VueGtag, {

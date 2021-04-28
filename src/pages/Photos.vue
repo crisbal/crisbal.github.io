@@ -98,6 +98,7 @@ export default {
   padding: 0.5rem;
   page-break-inside: avoid;
   break-inside: avoid;
+  cursor: pointer;
 
   &__image {
     width: 100%;

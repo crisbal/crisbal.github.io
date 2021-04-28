@@ -1,9 +1,10 @@
 <template lang="pug">
   SiteLayout.View--Photos
     .Photos
-      .Photo(v-for="photo in $page.allPhotos.edges")
-        g-image.Photo__image(:src="photo.node.src")
-        .Photo__caption(v-if="photo.node.caption") {{ photo.node.caption }}
+      template(v-for="photo in $page.allPhotos.edges")
+        .Photo(@click="selectedPhoto=photo.node")
+          g-image.Photo__image(:src="photo.node.src")
+          .Photo__caption(v-if="photo.node.caption") {{ photo.node.caption }}
     .Photos__license
       | These photos are licensed under the&nbsp;
       a(href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank") CC-BY-SA 4.0 License
@@ -12,6 +13,17 @@
       | If you use these photos, you can make my day by &nbsp;
       a(:href="'mailto:' + $static.metadata.contactEmail") sending me an email
       | &nbsp;to let me know.
+    Dialog.DialogPhoto(v-model="selectedPhoto" v-if="selectedPhoto")
+      .DialogPhoto__header
+        div.DialogPhoto__caption {{ selectedPhoto.caption }}
+        .spacer
+        i.mdi.mdi-close(@click="selectedPhoto=null")
+      img(:src="selectedPhoto.src.src")
+      .DialogPhoto__footer
+        .spacer
+        a.Button(:href="selectedPhoto.src.src" target="_blank")
+          i.mdi.mdi-download
+          | Download 
 </template>
 
 <page-query>
@@ -38,7 +50,15 @@ query {
 </static-query>
 
 <script>
+import Dialog from '~/components/Dialog';
+
 export default {
+  components: { Dialog },
+  data() {
+    return {
+      selectedPhoto: null,
+    }
+  },
   metaInfo: {
     title: 'Photos',
     meta: [
@@ -106,5 +126,34 @@ export default {
       opacity: 1;
     }
   }
+}
+
+.DialogPhoto {
+  &__header {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+
+    .mdi-close {
+      cursor: pointer;
+      font-size: 1.25rem;
+      padding: 0.25rem;
+      padding-right: 0;
+    }
+
+    .DialogPhoto__caption {
+      font-size: 1.25rem;
+    }
+  }
+  &__footer {
+    margin-top: 1rem;
+    display: flex;
+    .Button {
+      width: 100%;
+    }
+  }
+
+  
+
 }
 </style>

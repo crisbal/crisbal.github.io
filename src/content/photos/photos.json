@@ -16,6 +16,9 @@
         "src": "./src/assets/photos/DSC00685.jpg"
     },
     {
+        "src": "./src/assets/photos/DSC00863.jpg"
+    },
+    {
         "src": "./src/assets/photos/DSC00877.jpg",
         "caption": "A painter in Nyon (Switzerland)"
     },
@@ -63,6 +66,9 @@
         "caption": "Lauretta"
     },
     {
+        "src": "./src/assets/photos/DSC01636.jpg"
+    },
+    {
         "src": "./src/assets/photos/DSC01641.jpg",
         "caption": "A couple in Geneva Station (Switzerland)"
     },
@@ -93,5 +99,8 @@
     },
     {
         "src": "./src/assets/photos/DSC02082.jpg"
+    },
+    {
+        "src": "./src/assets/photos/DSC02167.jpg"
     }
 ]

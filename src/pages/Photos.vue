@@ -18,7 +18,7 @@
         div.DialogPhoto__caption {{ selectedPhoto.caption }}
         .spacer
         i.mdi.mdi-close(@click="selectedPhoto=null")
-      img(:src="selectedPhoto.src.src")
+      g-image(:src="selectedPhoto.src.src")
       .DialogPhoto__footer
         .spacer
         a.Button(:href="selectedPhoto.src.src" target="_blank")

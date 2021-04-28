@@ -39,12 +39,15 @@ export default {
 
     &__content {
         border-radius: 3px;
-        max-width: 720px;
+        max-width: 90%;
         background: var(--background-color);
         padding: 1rem;
 
         img {
+            display: block;
+            margin: 0 auto;
             max-width: 100%;
+            max-height: 75vh;
         }
     }
 }

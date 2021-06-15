@@ -49,7 +49,7 @@ export default {
     font-size: 1.1rem;
   }
 
-  & /deep/ {
+  & ::v-deep {
     * {
       margin-bottom: 1rem;
     }

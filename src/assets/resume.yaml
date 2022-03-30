@@ -13,35 +13,50 @@ sections:
   width: 100%
   entries:
   - place: CERN
-    date: Mar. 2020 - Dec. 2020
-    title: Python DevOps Engineer
+    date: Sep. 2021 - Present
+    title: DevOps Engineer (Python)
     details:
-    - Developed a tool to deploy Python applications in the CERN Control Centre
-    - Maintained and extended development tools and services for Python developers
-    - Implemented a solution for tracking Python usage inside the organization
-    - Supported users and developers on mailing lists and chat channels
-  - place: 2Program S.r.l
+    - Increased project quality by providing developers with CI/CD templates for handling day-to-day needs.
+    - Enabled developers to deploy Python application in containers by developing a set of specialized base images
+    - Improved knowledge of best-practices by holding presentations on topics such as testing, containers, CI/CD.
+  - place: Freelance (TODO)
+    date: Mar. 2021 - Jul. 2021
+    title: Fullstack Developer
+    details:
+    - Developed offline-first web applications with Typescript, React and Tailwind
+    - Created rich and interactive Vue.js visual experiences from scratch
+    - Implemented REST API's with Laravel, Laravel Nova
+  - place: CERN
+    date: Mar. 2020 - Dec. 2020
+    title: DevOps Engineer (Python)
+    details:
+    - Developed a tool used in the deployment of 90+ Python applications for the CERN Control Centre
+    - Improved development experience of 250+ developers with in-house development tools and services
+    - Enabled real-time monitoring of Python usage by implementing a solution to track Python invocations
+    - Supported developers in the resolution of problems on mailing lists and chat channels
+  - place: 2Program S.r.l (TODO)
     date: July 2017 - Feb. 2020
     title: Frontend Web Developer
     details:
-    - Designed and implemented public websites focusing on SEO and best practices
-    - Developed interactive and responsive progressive web applications using Vue.js
-    - Maintained and expanded existing Laravel projects as requested by clients
-  - place: Google Summer of Code @ KDE e.V.
-    date: May 2017 - Sept. 2017
-    title: Open Source Fullstack Web Developer
-    details:
-    - Designed and developed a server-side rendered progressive web app with Vue.js
-    - Developed a backend service to interface with various APIs using Flask
-    - Implemented unit and end-to-end tests for the web app
-    - Containerized the web app and the backend service for usage with Docker
-  - place: WikiToLearn, a KDE project
+    - Designed and implemented lightweight websites for high-traffic events
+    - Developed higly interactive progressive web applications using Vue.js
+    - Maintained and expanded various Laravel projects
+  - place: WikiToLearn (Open Source project)
     date: Dec. 2015 - Sept. 2017
-    title: Fullstack Developer and Open Source Contributor
+    title: Fullstack Developer
     details:
-    - Planned the product and the architecture with other developers and sysadmins
-    - Developed themes and extensions for the Mediawiki platform
-    - Maintained and improved forks of existing open source projects
+      - a
+  #  - Designed and developed a server-side rendered progressive web app with Vue.js
+  #  - Developed a backend service to interface with various APIs using Flask
+  #  - Implemented unit and end-to-end tests for the web app
+  #  - Containerized the web app and the backend service for usage with Docker
+  #- place: WikiToLearn, a KDE project
+  #  date: Dec. 2015 - Sept. 2017
+  #  title: Fullstack Developer and Open Source Contributor
+  #  details:
+  #  - Planned the product and the architecture with other developers and sysadmins
+  #  - Developed themes and extensions for the Mediawiki platform
+  #  - Maintained and improved forks of existing open source projects
   # - place: S.C.T. Informatica
   #   date: Summer 2013 & 2014
   #   title: Intern Software Developer
@@ -58,7 +73,6 @@ sections:
     details:
     - "Thesis: Deployment of Python Applications in the CERN Control Centre"
     - "Final grade: 110/110 cum laude"
-    - "Electives: Advance Machine Learning, Data Analytics, Large Scale Data Management, Data & Text Mining, Probabilistic Models, Cloud Computing, Software Architecture"
   - place: University of Milano Bicocca
     date: 2015 - 2018
     title: Bachelor's Degree in Computer Science

@@ -1,0 +1,42 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+	title?: string;
+  isPhotos?: boolean;
+}
+
+const { title = "Cristian Baldi", isPhotos = false } = Astro.props;
+const currentPath = Astro.url.pathname;
+// Check if we are on the home page to mimic the v-if="$route.name != 'home'" behavior
+const isHome = currentPath === '/' || currentPath === '';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Personal website of Cristian Baldi" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.materialdesignicons.com/5.3.45/css/materialdesignicons.min.css" rel="stylesheet">
+    <slot name="head" />
+	</head>
+	<body class="flex flex-col min-h-screen">
+    <Header />
+    <main class:list={[
+        "flex-1 w-full mx-auto",
+        isPhotos ? "max-w-none p-0" : "max-w-[1140px] px-6 md:px-8"
+    ]}>
+        <slot />
+    </main>
+    {!isHome && <Footer />}
+	</body>
+</html>

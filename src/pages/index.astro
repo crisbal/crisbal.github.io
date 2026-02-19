@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import meImg from '../assets/me.jpg';
+
+const contactEmail = "cristian@baldi.me";
+const title = "Cristian Baldi";
+const description = "DevOps Engineer and Web Developer with a passion for Open Source and Photography.";
+
+const buttonClass = "text-[var(--text-color)] bg-[var(--background-color)] cursor-pointer no-underline inline-flex items-center justify-center px-4 py-2 rounded-[3rem] border border-[var(--dark-gray)] transition-all duration-100 ease-linear hover:bg-[var(--light-gray)] hover:no-underline mr-2 mb-2 w-full md:w-auto";
+---
+
+<Layout title={title}>
+  <div class="flex flex-col md:flex-row flex-wrap items-center justify-center min-h-[50vh]">
+    <div class="mr-0 mb-4 md:mr-8 md:mb-0">
+      <Image
+        src={meImg}
+        alt="Photo of Cristian Baldi"
+        class="block max-w-full h-auto w-[70%] mx-auto md:w-auto md:h-80 rounded-2xl"
+        loading="eager"
+      />
+    </div>
+
+    <div class="text-center md:text-left">
+      <div class="text-2xl md:text-[2rem] font-normal mb-2">Hello! I am a</div>
+      <div class="text-4xl md:text-[4rem] font-bold whitespace-normal md:whitespace-nowrap leading-tight text-[#27ae60]">
+        Platform Engineer
+      </div>
+      <div class="text-4xl md:text-[4rem] font-bold whitespace-normal md:whitespace-nowrap leading-tight text-[#274eae]">
+        Full Stack Developer
+      </div>
+      <div class="text-2xl md:text-[2rem] font-normal mt-2">
+        with a passion for&nbsp;
+        <span class="text-[#ae2727] font-bold">open source</span>
+        &nbsp;and&nbsp;
+        <span class="text-[#ae2795] font-bold">photography</span>
+      </div>
+
+      <div class="mt-4 flex flex-wrap justify-center md:justify-start">
+        <div class="inline-block w-1/2 md:w-auto pr-1 md:pr-0">
+          <a href="/resume" class={buttonClass}>
+            <i class="mdi mdi-account mr-2"></i> Resume
+          </a>
+        </div>
+        <div class="inline-block w-1/2 md:w-auto pl-1 md:pl-0">
+          <a href="https://github.com/crisbal" target="_blank" class={buttonClass}>
+            <i class="mdi mdi-github mr-2"></i> GitHub
+          </a>
+        </div>
+        <div class="inline-block w-1/2 md:w-auto pr-1 md:pr-0">
+          <a href="https://www.linkedin.com/in/crisbal/" target="_blank" class={buttonClass}>
+            <i class="mdi mdi-linkedin mr-2"></i> LinkedIn
+          </a>
+        </div>
+        <div class="inline-block w-1/2 md:w-auto pl-1 md:pl-0">
+          <a href={`mailto:${contactEmail}`} class={buttonClass}>
+            <i class="mdi mdi-at mr-2"></i> Email
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

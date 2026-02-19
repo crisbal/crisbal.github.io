@@ -1,0 +1,64 @@
+---
+const siteName = "Cristian Baldi";
+const currentPath = Astro.url.pathname;
+
+const isActive = (path: string) => {
+  // Handle trailing slash consistency
+  const normalizedCurrent = currentPath.endsWith('/') && currentPath.length > 1
+    ? currentPath.slice(0, -1)
+    : currentPath;
+  const normalizedPath = path.endsWith('/') && path.length > 1
+    ? path.slice(0, -1)
+    : path;
+
+  return normalizedCurrent === normalizedPath;
+};
+---
+
+<header class="p-3 px-4 md:p-5 md:px-8">
+  <div class="block text-center md:flex md:flex-wrap md:items-center md:justify-center">
+    <a
+      href="/"
+      class="block whitespace-nowrap text-[var(--slate)] text-[1.75rem] font-normal no-underline mb-1 md:mb-0 hover:no-underline"
+    >
+      {siteName}
+    </a>
+    <div class="hidden md:block md:flex-1"></div>
+    <nav class="text-center">
+        <a
+          href="/resume"
+          class:list={[
+            "px-2 mx-2 no-underline transition-all duration-100 ease-linear hover:text-[var(--link-color)]",
+            isActive("/resume") ? "text-[var(--link-color)]" : "text-[var(--text-color)]"
+          ]}
+        >
+            Resume
+        </a>
+      <a
+        href="https://github.com/crisbal"
+        target="_blank"
+        class="px-2 mx-2 text-[var(--text-color)] no-underline transition-all duration-100 ease-linear hover:text-[var(--link-color)]"
+      >
+        Projects
+      </a>
+      <a
+        href="/photos"
+        class:list={[
+          "px-2 mx-2 no-underline transition-all duration-100 ease-linear hover:text-[var(--link-color)]",
+          isActive("/photos") ? "text-[var(--link-color)]" : "text-[var(--text-color)]"
+        ]}
+      >
+        Photos
+      </a>
+      <a
+        href="/posts"
+        class:list={[
+          "px-2 mx-2 no-underline transition-all duration-100 ease-linear hover:text-[var(--link-color)]",
+          isActive("/posts") ? "text-[var(--link-color)]" : "text-[var(--text-color)]"
+        ]}
+      >
+        Posts
+      </a>
+    </nav>
+  </div>
+</header>

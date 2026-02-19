@@ -1,0 +1,54 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const formatDate = (date: Date) => {
+  return date.toLocaleDateString('en-GB', {
+    day: '2-digit',
+    month: 'long',
+    year: 'numeric'
+  });
+};
+---
+
+<Layout title={post.data.title}>
+  <article class="mb-8 pb-8 border-b border-[#cfcfcf]">
+    <header>
+      <div class="text-[1rem] text-[#a3a3a3] mb-1 md:text-[1.2rem]">
+        On <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+      </div>
+      <h2 class="text-2xl md:text-[2rem] font-normal mb-1 text-[var(--slate)]">
+        <a href={`/posts/${post.slug}`} class="text-inherit no-underline hover:underline">
+          {post.data.title}
+        </a>
+      </h2>
+    </header>
+
+    <div class="text-[1.1rem] md:text-[1.3rem] my-4 md:my-4
+      [&>*]:mb-4
+      [&_a]:text-[var(--link-color)] [&_a]:no-underline hover:[&_a]:underline
+      [&_h1]:mb-1 [&_h2]:mb-1 [&_h3]:mb-1 [&_h4]:mb-1 [&_h5]:mb-1 [&_h6]:mb-1
+      [&_img]:block [&_img]:mx-auto [&_img]:max-w-full
+      [&_video]:block [&_video]:mx-auto [&_video]:max-w-full
+      [&_figure]:text-center [&_figure]:p-4 [&_figure]:rounded-lg [&_figure]:mb-4 [&_figure]:border [&_figure]:border-[#cfcfcf]
+      [&_figcaption]:mt-1 [&_figcaption]:italic
+      [&_blockquote]:p-4 [&_blockquote]:bg-[var(--light-gray)] [&_blockquote_p]:mb-0
+      [&_:not(pre)>code]:inline-block [&_:not(pre)>code]:bg-[var(--light-gray)] [&_:not(pre)>code]:px-1
+      [&_pre]:block [&_pre]:p-3 [&_pre]:overflow-x-auto
+      [&_ul]:list-disc [&_ul]:pl-5
+    ">
+      <Content />
+    </div>
+  </article>
+</Layout>

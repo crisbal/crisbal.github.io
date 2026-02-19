@@ -1,0 +1,125 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import photosData from '../data/photos.json';
+
+// Import all photos eagerly
+const photoFiles = import.meta.glob<{ default: ImageMetadata }>('/src/assets/photos/*.jpg', { eager: true });
+
+// Helper to find image object
+const getPhoto = (path: string) => {
+    // The JSON path is relative to project root usually in Gridsome context "./src/assets..."
+    // We need to match it to the glob keys which are "/src/assets/..."
+    const cleanPath = path.replace(/^\./, '');
+    const found = photoFiles[cleanPath];
+    if (!found) {
+        console.error(`Photo not found: ${path} (Cleaned: ${cleanPath})`);
+        return null;
+    }
+    return found.default;
+};
+
+const photos = photosData.map(p => {
+    const imageNode = getPhoto(p.src);
+    return {
+        ...p,
+        imageNode
+    };
+}).filter(p => p.imageNode);
+
+const contactEmail = "cristian@baldi.me";
+---
+
+<Layout title="Photos" isPhotos={true}>
+  <div class="columns-1 md:columns-4 gap-0 leading-[0]">
+    {photos.map((photo, index) => (
+      <div
+        class="relative p-2 break-inside-avoid cursor-pointer transition-all duration-100 ease-linear group photo-item"
+        data-index={index}
+        data-full-src={photo.imageNode?.src}
+        data-caption={photo.caption || ''}
+      >
+        <Image
+            src={photo.imageNode!}
+            alt={photo.caption || "Photo by Cristian Baldi"}
+            class="w-full h-auto block rounded-sm"
+            width={600}
+            quality={80}
+        />
+        {photo.caption && (
+            <div class="leading-tight absolute bottom-2 left-2 right-2 p-1 px-2 text-white bg-black/70 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-100 ease-linear rounded-sm">
+                {photo.caption}
+            </div>
+        )}
+      </div>
+    ))}
+  </div>
+
+  <div class="text-center px-4 pt-4 pb-8">
+      These photos are licensed under the&nbsp;
+      <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" class="text-[var(--link-color)] hover:underline">CC-BY-SA 4.0 License</a>.
+      <br />
+      If you use these photos, you can make my day by &nbsp;
+      <a href={`mailto:${contactEmail}`} class="text-[var(--link-color)] hover:underline">sending me an email</a>
+      &nbsp;to let me know.
+  </div>
+
+  <!-- Lightbox Modal -->
+  <dialog id="photo-dialog" class="fixed inset-0 z-50 bg-transparent p-0 w-full h-full max-w-none max-h-none backdrop:bg-black/90 open:flex open:flex-col open:items-center open:justify-center">
+      <div class="w-full h-full flex flex-col items-center justify-center p-4">
+        <div class="w-full max-w-6xl flex justify-between items-center mb-2 text-white">
+             <div id="dialog-caption" class="text-xl font-light"></div>
+             <button id="close-dialog" class="text-3xl hover:text-gray-300 cursor-pointer bg-transparent border-none text-white p-2">
+                <i class="mdi mdi-close"></i>
+             </button>
+        </div>
+
+        <img id="dialog-img" src="" class="max-w-full max-h-[85vh] object-contain shadow-lg rounded-lg" />
+
+        <div class="mt-4 w-full max-w-6xl flex justify-end">
+            <a id="download-link" href="#" target="_blank" class="text-[var(--text-color)] bg-[var(--background-color)] cursor-pointer no-underline inline-flex items-center justify-center px-4 py-2 rounded-[3rem] border border-[var(--dark-gray)] transition-all duration-100 ease-linear hover:bg-[var(--light-gray)] hover:no-underline w-full md:w-auto">
+                <i class="mdi mdi-download mr-2"></i> Download
+            </a>
+        </div>
+      </div>
+  </dialog>
+</Layout>
+
+<script>
+    const dialog = document.getElementById('photo-dialog') as HTMLDialogElement;
+    const dialogImg = document.getElementById('dialog-img') as HTMLImageElement;
+    const dialogCaption = document.getElementById('dialog-caption');
+    const downloadLink = document.getElementById('download-link') as HTMLAnchorElement;
+    const closeBtn = document.getElementById('close-dialog');
+    const photoItems = document.querySelectorAll('.photo-item');
+
+    photoItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // @ts-ignore
+            const fullSrc = item.dataset.fullSrc;
+            // @ts-ignore
+            const caption = item.dataset.caption || '';
+
+            if (dialogImg && dialogCaption && downloadLink && dialog) {
+                dialogImg.src = fullSrc;
+                dialogCaption.textContent = caption;
+                downloadLink.href = fullSrc;
+                dialog.showModal();
+            }
+        });
+    });
+
+    if (closeBtn && dialog) {
+        closeBtn.addEventListener('click', () => {
+            dialog.close();
+        });
+    }
+
+    if (dialog) {
+        dialog.addEventListener('click', (e) => {
+            if (e.target === dialog) {
+                dialog.close();
+            }
+        });
+    }
+</script>

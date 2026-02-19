@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('posts')).sort(
+	(a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+// Helper to format date
+const formatDate = (date: Date) => {
+  return date.toLocaleDateString('en-GB', {
+    day: '2-digit',
+    month: 'long',
+    year: 'numeric'
+  });
+};
+
+// Helper to generate a preview from body
+const getExcerpt = (body: string) => {
+  // Remove markdown headers and images
+  let text = body.replace(/^#+\s+(.*)$/gm, '$1')
+                 .replace(/!\[.*?\]\(.*?\)/g, '')
+                 .replace(/\[.*?\]\(.*?\)/g, '$1'); // Keep link text
+
+  // Remove html tags
+  text = text.replace(/<[^>]*>/g, '');
+  // Remove newlines and extra spaces
+  text = text.replace(/\s+/g, ' ').trim();
+
+  if (text.length > 280) {
+    return text.substring(0, 280) + '...';
+  }
+  return text;
+};
+
+const title = "Posts";
+---
+
+<Layout title={title}>
+  {posts.map((post) => (
+    <article class="mb-4 pb-4 border-b border-[#cfcfcf] md:mb-8 md:pb-8">
+      <header>
+        <div class="text-[1rem] text-[#a3a3a3] mb-1 md:text-[1.2rem]">
+          On <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+        </div>
+        <h2 class="text-2xl md:text-[2rem] font-normal mb-1 text-[var(--slate)]">
+          <a href={`/posts/${post.slug}`} class="text-inherit no-underline hover:underline">
+            {post.data.title}
+          </a>
+        </h2>
+      </header>
+      <div class="text-[1.1rem] mb-1 md:text-[1.3rem]">
+        {getExcerpt(post.body)}
+      </div>
+      <footer>
+        <a href={`/posts/${post.slug}`} class="text-[1.1rem] text-[var(--link-color)] no-underline hover:underline md:text-[1.3rem]">
+          Read More
+        </a>
+      </footer>
+    </article>
+  ))}
+</Layout>

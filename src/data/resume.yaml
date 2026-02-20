@@ -1,151 +1,121 @@
 meta:
   name: Cristian Baldi
-  claim: Python, DevOps, Web Development
+  claim: Platform Engineer, Full Stack Developer
   links:
   - text: cristian@baldi.me
     href: mailto:cristian@baldi.me
   - text: github.com/crisbal
     href: https://github.com/crisbal
+
 sections:
 - title: Experience
   titleColor: "rgb(39, 174, 96)"
-  type: entries
-  width: 100%
+  customizations: []
   entries:
-  - place: CERN
+  - title: Senior Platform Engineer (Cloud, DevOps)
+    description: Scrive
+    date: Remote / Nov. 2022 - Present
+    bullets:
+    - Built **AWS & OpenStack infra** for 100+ developers, based on GitOps principles, **Kubernetes** and **Terraform**
+    - Developed internal tools (Python, Go, Helm) to **lower time-to-deploy** and reduce manual work
+    - "**Reduced AWS costs** up to 15% while maintaining performance and reliability (S3, EC2 Spot Instances)"
+    # - Lowered disaster recovery time by reducing technical debt and automatizing (complete recovery in <5 hours)
+    - Led RFCs on topics such as **tech debt reduction**, **security standards**, and infrastructure improvements
+    - Participated in **security audits** and certifications (**ISO 27001**) and implemented security best practices
+    - "**Mentored junior colleagues** - Handled emergencies and **on-call** - Worked with cross-functional teams"
+
+  - title: DevOps Engineer (Python)
+    description: CERN - European Organization for Nuclear Research
+    date: Sept. 2021 - Oct. 2022
+    bullets:
+      - Improved **workflows of 250+ developers** and scientists, by developing specialized **backend services** and CLIs
+      - Provided **reusable CI/CD pipeline templates** for supporting 100+ GitLab repositories
+      - Reduced downtime and enabled continous deployment of web services on OpenShift and Kubernetes
+      # - Enabled deployment of Python application in Docker by providing specific container images and tools
+      - Held periodic talks on **best-practices for developers** on topics such as testing, containerization, CI/CD
+
+  - title: Full Stack Web Developer
+    description: Freelance
+    date: Remote / Mar. 2021 - Jul. 2021
+    bullets:
+      - Developed web applications and REST APIs with TypeScript, React, Vue.js, Laravel
+
+  - title: DevOps Engineer (Python)
+    description: CERN - European Organization for Nuclear Research
     date: Mar. 2020 - Dec. 2020
-    title: Python DevOps Engineer
-    details:
-    - Developed a tool to deploy Python applications in the CERN Control Centre
-    - Maintained and extended development tools and services for Python developers
-    - Implemented a solution for tracking Python usage inside the organization
-    - Supported users and developers on mailing lists and chat channels
-  - place: 2Program S.r.l
-    date: July 2017 - Feb. 2020
-    title: Frontend Web Developer
-    details:
-    - Designed and implemented public websites focusing on SEO and best practices
-    - Developed interactive and responsive progressive web applications using Vue.js
-    - Maintained and expanded existing Laravel projects as requested by clients
-  - place: Google Summer of Code @ KDE e.V.
-    date: May 2017 - Sept. 2017
-    title: Open Source Fullstack Web Developer
-    details:
-    - Designed and developed a server-side rendered progressive web app with Vue.js
-    - Developed a backend service to interface with various APIs using Flask
-    - Implemented unit and end-to-end tests for the web app
-    - Containerized the web app and the backend service for usage with Docker
-  - place: WikiToLearn, a KDE project
-    date: Dec. 2015 - Sept. 2017
-    title: Fullstack Developer and Open Source Contributor
-    details:
-    - Planned the product and the architecture with other developers and sysadmins
-    - Developed themes and extensions for the Mediawiki platform
-    - Maintained and improved forks of existing open source projects
-  # - place: S.C.T. Informatica
-  #   date: Summer 2013 & 2014
-  #   title: Intern Software Developer
-  #   details:
-  #   - Developed a web application for designing and previewing prefabricated buildings
+    bullets:
+      - Developed a Python FastAPI backend for the **deployment of 90+ apps** used for the **LHC particle accelerator**
+      - Enabled real-time monitoring of Python usage and performance across the organization
+
+  - title: Full Stack Web Developer
+    description: 2Program S.r.l
+    date: Remote / Jul. 2017 - Feb. 2020
+    bullets:
+      - Developed highly-interactive progressive web applications written in TypeScript and Vue.js
+      - Designed and implemented lightweight websites used in events with 100s of concurrent users
+
+
 - title: Education
   titleColor: "rgb(39, 78, 174)"
-  type: entries
-  width: 100%
+  customizations: []
   entries:
-  - place: University of Milano Bicocca
-    date: 2018 - 2021
+  - description: University of Milano Bicocca
     title: Master's Degree in Computer Science
-    details:
-    - "Thesis: Deployment of Python Applications in the CERN Control Centre"
-    - "Final grade: 110/110 cum laude"
-    - "Electives: Advance Machine Learning, Data Analytics, Large Scale Data Management, Data & Text Mining, Probabilistic Models, Cloud Computing, Software Architecture"
-  - place: University of Milano Bicocca
-    date: 2015 - 2018
-    title: Bachelor's Degree in Computer Science
-    details:
-    - "Thesis: Reinforcement Learning for Global Optimization"
-    - "Final grade: 110/110 cum laude"
+    bullets:
+    - "Master Thesis: Deployment of Python Applications in the CERN Control Centre"
+    - "Bachelor's Thesis: Reinforcement Learning for Global Optimization"
+
 - title: Skills
   titleColor: "rgb(174, 39, 39)"
-  width: 50%
-  type: items
-  extra:
-  - breath
-  subsections:
-  - name: Python 3
-    items:
-    - title: Libraries
-      text: Flask, Pandas, Matplotlib, Pytest, Requests
-    - title: Other
-      text: Virtual Environments, Package Management
-  - name: DevOps
-    items:
-    - title: System Administration
-      text: "Ubuntu, Debian, Arch Linux"
-    - title: General Tools
-      text: Docker, Ansible, Bash Scripting
-    - title: Best Practices
-      text: Testing, CI/CD, Docs
-    - title: Version Control
-      text: Git, Git Flow, GitLab, GitLab CI
-  - name: Web Development
-    items:
-    - title: HTML5 & CSS3
-      text: Pug, Sass
-    - title: Vue.js
-      text: Vuex, Server Side Rendering, Vuetify
-    - title: JavaScript ES6 & Node.js
-      text: Socket.io, Axios, jQuery
-    - title: PHP7
-      text: Laravel, Lumen, Mediawiki, Wordpress
-  - name: Other
-    items:
-      - title: Databases
-        text: "SQL, MongoDB"
-      - title: BigData
-        text: Elasticsearch, Kibana, Kafka, Faust
-      - title: Other languages
-        text: Typescript, Java
-      - title: Machine Learning
-        text: Supervised & Reinforcement
+  customizations: []
+  columns:
+  - title: Cloud & Platform
+    description: "AWS, Kubernetes, Terraform"
+  - title: Programming languages
+    description: "Python, TypeScript, Go"
+  - title: GitOps & CI/CD
+    description: "ArgoCD, GitHub Actions"
+  - title: Web Development
+    description: "React, FastAPI, Flask, Vue.js"
+  - title: Kubernetes Ecosystem
+    description: "Prometheus, GatewayAPI, Cilium"
+  - title: Other
+    description: "react-native, nim, LLMs"
 
 - title: Personal Projects
   titleColor: "rgb(174, 39, 149)"
-  width: 50%
-  type: items
-  extra:
-  - margin-bottom
-  - no-bullet
-  items:
-  - title: HMM Text Corrector
-    description: Python, NumPy, Flask
-    text: Text corrector based on Hidden Markov Models with novel ideas to improve performance and accuracy.
+  customizations: []
+  entries:
+  - title: homelab
+    description: Docker, Kubernetes, Networking, Home Automation
+    paragraphs:
+      - Administrating a home server running various services for me, my family, and for automating my home
+  - title: nim_chess
+    description: nim
+    link:
+      text: GitHub
+      href: https://github.com/crisbal/nim_chess
+    paragraphs:
+      - A chess engine written in Nim; Not very strong, but it can beat me :)
   - title: album-splitter
     description: Python, BeautifulSoup, ffmpeg
-    text: A script to automatically split a single-file Mp3 album into its tracks; Supports scraping metadata from Wikipedia.
-  - title: Nikoro - a Telegram Chatbot Framework
-    description: Node.js
-    text: A framework for developing plugin-based chatbots, focusing on ease of use for plugins developers.
-  - title: PlayStoreLinks_bot
-    description: Python, Beautiful Soup, Unit Testing
-    text: A bot for an online forum handling from 50 to 100 requests daily for more than 5 years.
-- title: Other
+    paragraphs:
+      - A solution to automatically split a single-file Mp3 album into its tracks
+    link:
+      text: GitHub
+      href: https://github.com/crisbal/album-splitter
+
+- title: About Me
+  customizations: []
   titleColor: "rgb(255, 123, 28)"
-  width: 100%
-  type: items
-  extra:
-  - smallTitle
-  - compact
-  items:
+  bullets:
+  - title: Attitude
+    description: "Proactive, not afraid of risk, eager to learn new things, love to share knowledge"
+  - title: CKA & CKS Certifications
+    description: Certified Kubernetes Administrator & Kubernetes Security Specialist
   - title: Speaker at Milano Digital Week
-    description: March 2019
-    text: How do computers learn?
-  - title: Speaker at unixMib
-    description: March 2019
-    text:  Hitchhiker's Guide to Web Development
-  - title: Mentor for Google Summer of Code
-    description: Summer 2016
-    text: KDE e.V
-  - title: Mentor for Google Code-In
-    description: Winter 2015 & 2016
-    text: KDE e.V.
+    description: 2019 - How do computers learn? An intro to reinforcement learning
+  - title: Hobbies
+    description: "Cooking, running, playing ukulele, reading books"
+  #- title: Mentor for Google Summer of Code
+  #  description: 2015, 2016 - For the KDE project
